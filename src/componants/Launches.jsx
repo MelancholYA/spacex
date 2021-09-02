@@ -6,7 +6,7 @@ const Launches = () => {
 	const [launchesNum, setLaunchesNum] = useState(10);
 	const Launches = gql`
 		query {
-			launches(limit: ${launchesNum}) {
+			launches(limit: ${launchesNum},order: "desc", sort: "launch_date_local") {
 				id
 				mission_name
 				launch_date_local
